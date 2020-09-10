@@ -11,12 +11,21 @@ namespace pillepalle1.Tasks
         /// </summary>
         public async static Task WrapTryCatch(this Task t, Action<Exception> errorCallback = null, Action completedCallback = null)
         {
+            await t.WrapTryCatch<Exception>(errorCallback, completedCallback);
+        }
+
+        /// <summary>
+        /// Extension method that awaits a task and catches a specific Exception.
+        /// </summary>
+        public async static Task WrapTryCatch<TException>(this Task task, Action<TException> errorCallback = null, Action completedCallback = null)
+            where TException : Exception
+        {
             try
             {
-                await t;
+                await task;
                 completedCallback?.Invoke();
             }
-            catch (Exception e)
+            catch (TException e)
             {
                 errorCallback?.Invoke(e);
             }
