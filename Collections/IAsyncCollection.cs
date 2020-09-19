@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace dotnet_pillepalle1.Collections
+namespace pillepalle1.Collections
 {
     public interface IAsyncCollection<T> : System.Collections.Generic.IAsyncEnumerable<T>
     {
