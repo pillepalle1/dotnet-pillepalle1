@@ -181,8 +181,11 @@ namespace pillepalle1.Text
             }
 
             // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-            // Checking consistency
+            // Tidy up open flags and checking consistency
+            tokenList = tokenList.Add(tokenBuilder.ToString());
+
             if (escapeNext) throw new FormatException();            // Expecting additional char
+
 
             return tokenList;
         }
