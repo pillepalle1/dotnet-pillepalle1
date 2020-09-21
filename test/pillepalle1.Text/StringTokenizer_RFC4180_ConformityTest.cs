@@ -5,7 +5,7 @@ using pillepalle1.Text;
 
 namespace dotnet_pillepalle1_test
 {
-    public class StringTokenizer_RFC4180_ConfirmityTest
+    public class StringTokenizer_RFC4180_ConformityTest
     {
         /*
          * 1. Each record is located on a separate line, delimited by a line break (CRLF).  
