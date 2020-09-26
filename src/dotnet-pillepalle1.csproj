@@ -1,12 +1,24 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
-    <RootNamespace>pillepalle1</RootNamespace>
-  </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="System.Collections.Immutable" Version="*" />
   </ItemGroup>
 
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <RootNamespace>pillepalle1</RootNamespace>
+    <PackageId>pillepalle1</PackageId>
+    <Authors>github.com/pillepalle1</Authors>
+    <Company></Company>
+    <Product>Collection of Code Snippets</Product>
+    <Description>This package contains a collection of code snippets that I have written or collected over time.</Description>
+    <PackageLicenseFile>LICENSE.NUGET.txt</PackageLicenseFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="LICENSE.NUGET.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
 </Project>
